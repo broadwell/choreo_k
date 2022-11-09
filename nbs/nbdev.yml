@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "choreo_k_refactor"
+  site-url: "https://broadwell.github.io/choreo_k_refactor"
+  description: "Pose estimation tools"
+  repo-branch: main
+  repo-url: "https://github.com/broadwell/choreo_k_refactor"

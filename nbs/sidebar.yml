@@ -6,3 +6,5 @@ website:
       - 00_pifpafpose_detector.ipynb
       - 01_modify.ipynb
       - 02_matrixify.ipynb
+      - 03_visualize.ipynb
+      - 04_analyze.ipynb

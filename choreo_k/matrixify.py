@@ -14,7 +14,7 @@ from sklearn.preprocessing import normalize
 from scipy.sparse import lil_matrix
 import networkx as nx
 
-from .modify import flip_detections, flip_detections_y_first
+#from choreo_k.modify import flip_detections, flip_detections_y_first
 
 
 def matrixify_pose(coords_and_confidence):

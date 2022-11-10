@@ -19,7 +19,7 @@ import numpy as np
 #from PIL import Image
 import tensorflow as tf
 import tensorflow_hub as hub
-from tensorflow_docs.vis import embed
+#from tensorflow_docs.vis import embed # Disabled for nbdev
 
 from io import BytesIO
 import PIL
@@ -319,21 +319,22 @@ class Detector:
 
         return image_from_plot
 
+    # Disabled for nbdev
+    # def __to_gif__(self, images, fps):
+    #     """Converts image sequence (4D numpy array) to gif."""
+    #     imageio.mimsave('./animation.gif', images, fps=fps)
+    #     return embed.embed_file('./animation.gif')
     
-    def __to_gif__(self, images, fps):
-        """Converts image sequence (4D numpy array) to gif."""
-        imageio.mimsave('./animation.gif', images, fps=fps)
-        return embed.embed_file('./animation.gif')
     
-    
-    def gif_from_detections(self, pose_output, fps=25, blank_background=False):
-        output_images = []
-        bar = display(self.__progress__(0, len(pose_output)-1), display_id=True)
-        for frameno, frame_data in enumerate(pose_output):
-            bar.update(self.__progress__(frameno, len(pose_output)-1))
-            output_images.append(self.draw_predictions_on_image(frame_data['image'], frame_data['figures'], blank_background=blank_background))
-        output = np.stack(output_images, axis=0)
-        self.__to_gif__(output, fps=fps)
+    # Disabled for nbdev
+    # def gif_from_detections(self, pose_output, fps=25, blank_background=False):
+    #     output_images = []
+    #     bar = display(self.__progress__(0, len(pose_output)-1), display_id=True)
+    #     for frameno, frame_data in enumerate(pose_output):
+    #         bar.update(self.__progress__(frameno, len(pose_output)-1))
+    #         output_images.append(self.draw_predictions_on_image(frame_data['image'], frame_data['figures'], blank_background=blank_background))
+    #     output = np.stack(output_images, axis=0)
+    #     self.__to_gif__(output, fps=fps)
 
         
     def __progress__(self, value, max=100):

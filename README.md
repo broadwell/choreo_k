@@ -30,15 +30,21 @@ the notebook
 [Pose_analysis_examples.ipynb](https://github.com/broadwell/choreo_k_backup/blob/main/Pose_analysis_examples.ipynb)
 in Google Colab:
 
-<div>
-
-[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/broadwell/choreo_k_backup/blob/main/Pose_analysis_examples.ipynb)
-
-Open In Colab
-
-</div>
+<a href="https://colab.research.google.com/github/broadwell/choreo_k_backup/blob/main/Pose_analysis_examples.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Google Colab"></a>
 
 ## Documentation
 
-![Excerpts from analyses of BTS’s Fire and Jennie’s
-SOLO](pose_analysis_pipeline.png)
+Details of the specific functions of each module are available via the
+project [documentation site](https://broadwell.github.io/choreo_k/).
+
+Generally, though, `choreo_k` is intended to provide the pose analysis
+~~pipeline~~ routine illustrated in the following figure, in which each
+step of the routine can be implemented in one or more different ways,
+but each implementation provides roughly equivalent functionality. For
+example, different third-party pose detection libraries may be used to
+generate pose data, which then can be modified, represented, analyzed
+and visualized by any modules that support a specific library’s pose
+data output format.
+
+![An illustration of the steps of the archetypal pose analysis
+routine](pose_analysis_routine.png)
